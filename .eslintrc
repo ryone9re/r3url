@@ -10,7 +10,7 @@
   },
   "overrides": [
     {
-      "files": ["src/folder/**/*.{js,jsx,ts,tsx}"],
+      "files": ["app/**/*.{js,jsx,ts,tsx}"],
       "rules": {
         "import/order": [
           "error",

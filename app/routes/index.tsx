@@ -1,32 +1,45 @@
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  FormControl,
+  InputLabel,
+  OutlinedInput,
+  Typography
+} from '@mui/material'
+
+import PageTemplate from '~/components/PageTemplate'
+
 export default function Index() {
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target='_blank'
-            href='https://remix.run/tutorials/blog'
-            rel='noreferrer'
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target='_blank'
-            href='https://remix.run/tutorials/jokes'
-            rel='noreferrer'
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target='_blank' href='https://remix.run/docs' rel='noreferrer'>
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <PageTemplate>
+      <Body />
+    </PageTemplate>
+  )
+}
+
+const Body = () => {
+  return (
+    <Card sx={{ my: 2 }}>
+      <CardContent>
+        <Typography align='center' variant='h4' component='div'>
+          以下のボックスに省略したいURLを入力してください
+        </Typography>
+        <FormControl fullWidth sx={{ mt: 1.5 }}>
+          <InputLabel htmlFor='outlined-adornment-amount'>URL</InputLabel>
+          <OutlinedInput
+            id='outlined-adornment-amount'
+            onChange={() => console.log('click')}
+            label='Amount'
+          />
+        </FormControl>
+      </CardContent>
+      <CardActions sx={{ justifyContent: 'center' }}>
+        <Button fullWidth variant='contained'>
+          省略
+        </Button>
+      </CardActions>
+    </Card>
   )
 }

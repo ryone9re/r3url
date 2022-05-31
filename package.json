@@ -10,7 +10,7 @@
     "dev:miniflare": "cross-env NODE_ENV=development miniflare ./build/index.js --watch --kv R3URL_KV",
     "dev": "remix build && run-p dev:*",
     "start": "cross-env NODE_ENV=production miniflare ./build/index.js",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css}'"
+    "format": "prettier --write 'app/**/*.{js,jsx,ts,tsx,json,css}'"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",

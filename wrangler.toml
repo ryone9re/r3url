@@ -1,17 +1,16 @@
-name = "remix-cloudflare-workers"
-type = "javascript"
+name = "r3url"
+main = "build/index.js"
+compatibility_date = "2022-05-31"
 
-zone_id = ""
-account_id = ""
-route = ""
-workers_dev = true
+account_id = "da1439aff312a86553482e7c6e00bb04"
+route = "url.r3utools.com"
+
+kv_namespaces = [
+    { binding = "R3URL_KV", id = "181830cf932b4376be65e67c337dfdd3" }
+]
 
 [site]
 bucket = "./public"
-entry-point = "."
 
 [build]
 command = "npm run build"
-
-[build.upload]
-format="service-worker"

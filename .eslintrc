@@ -1,5 +1,6 @@
 {
-  "extends": ["@remix-run/eslint-config", "prettier", "import"],
+  "extends": ["@remix-run/eslint-config", "prettier"],
+  "plugins": ["import"],
   "settings": {
     "import/resolver": {
       "typescript": {
